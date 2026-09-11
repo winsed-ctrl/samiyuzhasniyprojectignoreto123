@@ -21,7 +21,7 @@
   "IsLocalServer": false,
   "IsCustom": false,
   "TimeUntilRestart": 6000,
-  "PatcherEnabled": true,
+  "PatcherEnabled": false,
   "PatcherFolder": "/content/Patch/",
   "PatcherIP": "schmidt-unscathed.tun.ply.gg",
   "MetricsEnabled": false,
