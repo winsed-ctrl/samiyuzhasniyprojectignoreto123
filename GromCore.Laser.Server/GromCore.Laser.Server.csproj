@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<StartupObject>GromCore.Laser.Server.Program</StartupObject>
+		<Configurations>Debug;Release;SHIT</Configurations>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Settings\ServerProperties.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AStarPathFinder" Version="1.0.0" />
+		<PackageReference Include="Colorful.Console" Version="1.2.15" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.9" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.9" />
+		<PackageReference Include="Npgsql" Version="9.0.2" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="prometheus-net" Version="8.2.1" />
+		<PackageReference Include="prometheus-net.AspNetCore" Version="8.2.1" />
+		<PackageReference Include="Telegram.Bot" Version="22.5.1" />
+		<PackageReference Include="Telegram.Bots" Version="5.9.0" />
+		<PackageReference Include="Telegram.Bots.Extensions.Polling" Version="5.9.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\GromCore.Laser.Logic\GromCore.Laser.Logic.csproj" />
+		<ProjectReference Include="..\GromCore.Laser.Titan\GromCore.Laser.Titan.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="fridascript.js">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="battle_player_map.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="config.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="gameplay.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Assets/profanity.txt">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ProjectExtensions>
+		<VisualStudio>
+			<UserProperties config_1json__JsonSchema="" />
+		</VisualStudio>
+	</ProjectExtensions>
+
+</Project>
